@@ -16,8 +16,15 @@ management:
     web:
       exposure:
         include: "*"
+      base-path: "/manage"
+  server:
+    port: 8090
 
 info:
   app:
     name: hello-actuator
     company: noose
+
+logging:
+  level:
+    com.example.demo.controller: debug
