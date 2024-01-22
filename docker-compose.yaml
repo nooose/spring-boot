@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    command:
+      - "--web.enable-lifecycle"
+    restart: always
+    user: root

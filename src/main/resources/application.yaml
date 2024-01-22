@@ -16,9 +16,9 @@ management:
     web:
       exposure:
         include: "*"
-      base-path: "/manage"
-  server:
-    port: 8090
+#      base-path: "/manage"
+#  server:
+#    port: 8090
 
 info:
   app:
@@ -28,3 +28,8 @@ info:
 logging:
   level:
     com.example.demo.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
