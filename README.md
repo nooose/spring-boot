@@ -51,7 +51,9 @@ docker-compose up -d
 ### 카운터(Counter)
 - 단순하게 증가하는 단일 누적 값
 - 예시) HTTP 요청 수, 로그 발생 수
+
 **단순 누적값 만으로는 분당 얼마나 요청이 어느정도 증가했는지 파악하기 어렵기 때문에 `increase` 또는 `rate` 함수를 사용해야 함**
+
 - `increase(http_server_requests_seconds_count{uri="/log"}[1m])`
 - `rate(http_server_requests_seconds_count{uri="/log"}[1m])`
 - `irate(http_server_requests_seconds_count{uri="/log"}[1m])`: 급격하게 증가하는 상황에서 사용하기 좋다
