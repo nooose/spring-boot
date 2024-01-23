@@ -57,3 +57,9 @@ docker-compose up -d
 - `increase(http_server_requests_seconds_count{uri="/log"}[1m])`
 - `rate(http_server_requests_seconds_count{uri="/log"}[1m])`
 - `irate(http_server_requests_seconds_count{uri="/log"}[1m])`: 급격하게 증가하는 상황에서 사용하기 좋다
+
+# 그라파나
+## 유용한 대시보드
+- [스프링부트 대시보드](https://grafana.com/grafana/dashboards/11378-justai-system-monitor/)
+  - 메트릭 쿼리 일부는 수정 필요
+- [JVM 대시보드](https://grafana.com/grafana/dashboards/4701-jvm-micrometer/)
